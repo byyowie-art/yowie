@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YOWIE</title>
+  <meta name="description" content="Fluffy hand knitted Mary Janes, made to order in Barcelona. Shipping worldwide.">
+  <meta property="og:title" content="YOWIE">
+  <meta property="og:image" content="assets/hero-green.jpg">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="topbar">
+      <nav>
+        <a href="#shop" data-i18n="navShop"></a>
+        <a href="#about" data-i18n="navAbout"></a>
+        <a href="#faq" data-i18n="navFaq"></a>
+        <a data-instagram target="_blank" rel="noopener">Instagram</a>
+      </nav>
+      <span class="lang"><button type="button" data-lang="en">EN</button><button type="button" data-lang="es">ES</button></span>
+    </div>
+    <a href="#" class="wordmark">YOWIE</a>
+  </header>
+
+  <main>
+    <section class="product" id="shop">
+      <div class="media">
+        <div class="thumbs" id="thumbs" aria-label="All photos"></div>
+        <div class="stage">
+          <div class="gallery" id="gallery" aria-label="Photos"></div>
+          <button class="arrow prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></button>
+          <button class="arrow next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <div class="progress"><span id="progress"></span></div>
+        </div>
+      </div>
+
+      <div class="info">
+        <h1 data-i18n="productName"></h1>
+        <p class="price"><span data-price></span> <span class="muted" data-i18n="shipping"></span></p>
+
+        <div class="field">
+          <div class="label"><span class="muted" data-i18n="colour"></span> <strong id="colorName"></strong></div>
+          <div class="swatches" id="swatches" role="radiogroup" aria-label="Colour"></div>
+          <p class="color-note" data-i18n="colorNote"></p>
+        </div>
+
+        <div class="field">
+          <div class="label"><span class="muted" data-i18n="size"></span> <a href="#tabs" class="guide" data-tab-open="sizing" data-i18n="sizeGuideLink"></a></div>
+          <div class="sizes" id="sizes" role="radiogroup" aria-label="Size"></div>
+        </div>
+
+        <button class="buy" id="buy" disabled></button>
+        <p class="note"><span class="arrow-mark">↘</span><span data-i18n="note"></span></p>
+
+        <div class="tabs" id="tabs">
+          <div class="tab-list" role="tablist">
+            <button type="button" role="tab" data-tab="details" data-i18n="detailsT"></button>
+            <button type="button" role="tab" data-tab="sizing" data-i18n="sizingT"></button>
+            <button type="button" role="tab" data-tab="care" data-i18n="careT"></button>
+            <button type="button" role="tab" data-tab="shipping" data-i18n="shippingT"></button>
+          </div>
+          <div class="tab-panels">
+          <p role="tabpanel" data-panel="details" data-i18n="detailsP"></p>
+          <div role="tabpanel" data-panel="sizing">
+            <p data-i18n="sizingP"></p>
+            <table class="size-table" id="sizeTable"></table>
+          </div>
+          <p role="tabpanel" data-panel="care" data-i18n="careP"></p>
+          <p role="tabpanel" data-panel="shipping" data-i18n="shippingP"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="palette" aria-label="All colours">
+      <h2 data-i18n="paletteT"></h2>
+      <ul id="palette"></ul>
+    </section>
+
+    <section class="about" id="about"><p data-i18n-html="about"></p></section>
+
+    <section class="faq" id="faq">
+      <h2 data-i18n="faqT"></h2>
+      <details><summary data-i18n="q1"></summary><p data-i18n="a1"></p></details>
+      <details><summary data-i18n="q2"></summary><p data-i18n="a2"></p></details>
+      <details><summary data-i18n="q3"></summary><p data-i18n="a3"></p></details>
+      <details><summary data-i18n="q4"></summary><p data-i18n="a4"></p></details>
+    </section>
+  </main>
+
+  <footer>
+    <span class="wordmark">YOWIE</span>
+    <span>Barcelona</span>
+    <a data-instagram target="_blank" rel="noopener">Instagram</a>
+    <a data-email></a>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="i18n.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
